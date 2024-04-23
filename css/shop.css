@@ -1,0 +1,576 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* 
+font-family: 'Noto Sans KR'; 
+font-family: "Roboto";
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR';
+    font-size: 17px;
+    line-height: 1.5;
+    color: #191919;
+    min-width: 1320px;
+}
+
+a {
+    text-decoration: none;
+    color: #191919;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 헤더 */
+header {
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    z-index: 99;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav {
+    width: 80%;
+    max-width: 1320px;
+    height: 70px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* 로고 */
+.logo {
+    display: block;
+}
+
+/* 메뉴 부분 */
+.gnb {
+    padding-top: 24px;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+}
+
+.gnb li {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+}
+
+.gnb li a {
+    color: #87736B;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    display: block;
+}
+
+.gnb li:hover a {
+    transform: translateY(-5px);
+}
+
+/* icon */
+.icon {
+    width: 12%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    padding-top: 25px;
+}
+
+.icon li {
+    flex: 1;
+}
+
+.icon li a {
+    display: block;
+}
+
+.icon li:hover a {
+    transform: translateY(-5px);
+}
+
+/* 메인배너 swiper */
+/* 인스타그램 swiper */
+.mySwiper {
+    width: 100%;
+    height: 100%;
+    margin: 70px auto 0;
+}
+
+.mySwiper .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1320px;
+}
+.mySwiper .swiper-slide img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*제품 라인별*/
+#product {
+    text-align: center;
+    width: 1320px;
+    margin: 100px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    color: #505050;
+    font-weight: 500;
+    margin: auto;
+}
+
+#product h1 {
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+#product dd {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+#product a {
+    display: inline-block;
+    padding: 3px 15px;
+    border: 1px solid #707070;
+    border-radius: 17px;
+    font-family: "Roboto";
+    font-size: 17px;
+}
+
+#product a:hover {
+    background-color: #0e2843;
+    border-color:#0e2843 ;
+    color: #fff;
+}
+#product dl:hover img {
+    transform: rotate(-5deg);
+}
+h6 {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    margin: 25px 0 50px;
+    font-weight: 400;
+}
+
+/* 캣타워 감싸는 박스 */
+#cat_tower {
+    margin: auto;
+    max-width: 1920px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+/* 캣타워 왼쪽편 */
+.tower_img {
+    width: 35%;
+    position: relative; 
+    perspective: 1000px;
+}
+.tower_img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 2s;
+}
+/* 뒷편 이미지 */
+.tower_left_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;  
+}
+/* 카드플립효과 */
+.tower_img:hover img {
+    transform: rotateY(180deg);
+    opacity: 1;
+}
+
+/* 캣타워 오른쪽편(제품) */
+.tower_product {
+    width: 65%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 0 160px 0 50px ;
+}
+
+/* 제품 */
+.tower_product dl{
+    width: 32%;
+    height: 49%;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    overflow: hidden;
+}
+.tower_product dl:nth-child(4),.tower_product dl:nth-child(5), .tower_product dl:nth-child(6){
+    margin-top: 2%;
+}
+
+/* 제품이미지 */
+.tower_product dt{
+    height: 65%;
+}
+.tower_product dt img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* 제품명, 제품가격 */
+.tower_product dd{
+    text-align: center;
+    height: 35%;
+    background-color: #eeeeee;
+    padding: 4% 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.tower_product h4 {
+    font-family: "Roboto";
+    font-size: 17px;                                 
+    font-weight: 400
+}
+.tower_product h3, .layout h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+/* 제품 호버시 아이콘 */
+.dd_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+    background-color: rgb(135, 115, 107);
+    transition: all 0.5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dd_box a{
+    display: inline-block;
+    padding: 0 6% ;
+}
+.tower_product dl:hover .dd_box {
+    transform: translateY(-100%);
+}
+
+
+/* 한정판 캣타워 출시 배너 */
+.banner {
+    background: url(../images/shop/shop_banner.png) no-repeat center top;
+    width: 100%;
+    margin: 0 auto 100px;
+    height: 600px;
+}
+.banner_text{
+    width: 1320px;
+    margin: auto;
+    padding-top: 150px;
+}
+.banner_text h2{
+    color: #56442E;
+    font-size: 60px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.banner_text h5{
+    font-size: 28px;
+    color: #56442E;
+    font-weight: 600;
+}
+.banner_text b{
+    color: #EBB266;
+}
+.banner_text p{
+    font-size: 16px;
+    padding: 10px 0 20px;
+}
+.banner a {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 2px solid #56442E;
+    font-size: 19px;
+    color: #56442E;
+    font-weight: 600;
+}
+.banner a:hover {
+    background-color: #56442E;
+    color: #fff;
+    animation: jelly 0.5s;
+}
+
+/* 애니메이션 젤리 움직임 */
+@keyframes jelly {
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+/* 캣베드,캣테이블,캣레스트룸 같은 레이아웃 */
+.layout {
+    overflow: hidden;
+    width: 1320px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center; 
+}
+.layout dl {
+    border: 1px solid #dddddd;
+    position: relative;
+    overflow: hidden;
+}
+.layout dd {
+    text-align: center;
+    height: 77px;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+}
+.layout img{
+    display: block;
+}
+.layout h4 {
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 400;
+    padding: 10px 0 5px;
+}
+/* 호버시 아이콘*/
+.dd_box2{
+    position: absolute;
+    background-color: rgb(135, 115, 107);
+    left: 0;
+    bottom: -77px;
+    width: 400px;
+    height: 77px;
+    transition: all 0.5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dd_box2 a{
+    display: inline-block;
+    padding:0 15px;
+}
+.layout dl:hover .dd_box2{
+    transform: translateY(-77px);
+}
+.magin_img, .layout>dl:nth-of-type(4){
+    margin: 70px 0 100px;
+}
+
+/* 탑버튼 */
+.top{
+    position: fixed;
+    bottom: 75px;
+    right: 10px;
+    display: none;
+    animation: top 1s infinite alternate linear;
+}
+.top img{
+    width: 75%;
+    display: block;
+}
+
+/* 탑버튼 애니메이션 */
+@keyframes top {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(25px);
+    }
+}
+
+/* 푸터 */
+footer {
+    background-color: #F1EEE7;
+}
+
+/* 푸터 탑 */
+.footer_top {
+    width: 1320px;
+    margin: auto;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_top ul {
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+}
+
+.footer_top ul a {
+    display: block;
+    padding-left: 10px;
+}
+
+.footer_top ul li {
+    padding-left: 5px;
+}
+
+.footer_top ul a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer_btn {
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: unset;
+    border: none;
+    padding-right: 30px;
+}
+
+.footer_btn:hover {
+    font-weight: bold;
+    color: #26190F;
+    text-decoration: underline;
+}
+
+.footer_btn::after {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid #26190F;
+    border-bottom: 1px solid #26190F;
+    position: absolute;
+    top: 22%;
+    left: 150px;
+    animation: ani2 0.7s infinite alternate;
+}
+
+@keyframes ani2 {
+    0% {
+        transform: translateY(-5px) rotate(45deg);
+    }
+
+    100% {
+        transform: translateY(5px) rotate(45deg);
+    }
+}
+
+/* 푸터 바텀 */
+.footer_bottom_box {
+    display: none;
+}
+
+.footer_bottom {
+    border-top: 1px solid #999;
+    font-size: 16px;
+    width: 1320px;
+    margin: auto;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* 회사정보 */
+.info {
+    line-height: 1.8;
+}
+
+.info span:nth-child(1)::after {
+    content: '';
+    border-left: 1px solid #4e4337;
+    margin: 0 10px;
+}
+
+i {
+    font-size: 15px;
+    color: #797979;
+    display: block;
+    margin-top: 15px;
+}
+
+/* cs 정보 */
+.cs_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.cs_info p {
+    padding-left: 25px;
+}

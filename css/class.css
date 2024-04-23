@@ -1,0 +1,446 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* 
+font-family: 'Noto Sans KR'; 
+font-family: "Roboto";
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR';
+    font-size: 17px;
+    line-height: 1.5;
+    color: #191919; 
+    min-width: 1320px;   
+}
+a {
+    text-decoration: none;
+    color: #191919;
+}
+ul {
+    list-style: none;
+}
+
+/* 헤더 */
+header {
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    z-index: 99;
+    border-bottom: 1px solid #ccc;
+}
+.nav {
+    width: 80%;
+    max-width: 1320px;
+    height: 70px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* 로고 */
+.logo {
+    display: block;
+}
+
+/* 메뉴 부분 */
+.gnb {
+    padding-top: 24px;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+}
+.gnb li {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+}
+.gnb li a {
+    color: #87736B;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    display: block;
+}
+.gnb li:hover a {
+    transform: translateY(-5px);
+}
+/* icon */
+.icon {
+    width: 12%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    padding-top: 25px;
+}
+.icon li {
+    flex: 1;
+}
+.icon li a {
+    display: block;
+}
+.icon li:hover a {
+    transform: translateY(-5px);
+}
+
+/* 메인배너 */
+.class_mb {
+    max-width: 1920px;
+    margin: auto;
+    width: 100%;
+    display: block;
+}
+
+/* 내용 감싸는 박스 */
+.wrap {
+    width: 1320px;
+    margin: 100px auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 45px;
+    color: #505050;
+    margin-bottom: 50px;
+}
+
+/* 원데이 클래스 */
+.class {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-stack;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+dt img {
+    display: block;
+}
+dt{
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+dt::before {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(207, 189, 168, 0.2);
+	border-radius: 100%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+dl:hover dt::before {
+    animation: circle 1s;
+}
+dd{
+    line-height: 1.4;
+}
+/* 애니메이션 Circle 빛 효과 */
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+dl p{
+    font-size: 16px;
+}
+dl h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+dl a {
+    display: inline-block;
+    border: 1px solid #707070;
+    padding: 5px 20px;
+}
+dl:hover a {
+    background-color: #4e4337;
+    color: #fff;
+    animation: jelly 0.5s;
+}
+
+/* 애니메이션 젤리 움직임 */
+@keyframes jelly {
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+/* 가구제작 정규클래스 안내 */
+.text_box {
+    width: 1320px;
+    height: 500px;
+    margin: 100px 0;
+    box-sizing: border-box;
+    padding: 45px 55px;
+    position: relative;
+}
+.text_bg1{
+  background: url(../images/class/furniture_class_img.png) no-repeat;  
+}
+
+h4{
+    font-size: 28px;
+    color: #505050;
+    font-weight: 400;
+}
+h2{
+    font-size: 40px;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    margin: 8px 0 30px;
+}
+.text_box p{
+    margin-bottom: 23px;
+    font-weight: 400;
+    font-size: 17px;
+}
+/* 네이버 예약 배너 */
+#class_banner{
+    background: url(../images/class/class_banner.png) no-repeat;
+    height: 300px;
+    margin: 100px 0;
+    position: relative;
+}
+#class_banner a{
+    display: inline-block;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 510px;
+    bottom: 25px;
+}
+#class_banner a:hover{
+    animation: jelly 0.5s;
+    color: #fca152;
+    font-weight: bold;
+}
+
+/* 우드카빙 클래스 안내 */
+.text_bg2{
+    background: url(../images/class/woodcarving_class_img.png) no-repeat;
+}
+.text_right{
+    position: absolute;
+    top: 45px;
+    right: 67px;
+}
+
+/* 유의사항 */
+.notice{
+    margin-top: 100px;
+    width: 1320px;
+    height: 400px;
+    background-color: #E6E2D8;
+    box-sizing: border-box;
+    padding: 40px 75px;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+}
+iframe{
+    filter:saturate(0.8) sepia(0.12) ;
+    border: 3px solid #A29691; 
+}
+
+h6{
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 37px;
+    color: #505050;
+    font-weight: 500;
+    padding: 0 50px 30px 0;
+}
+ol li{
+    padding-bottom: 12px;
+}
+ol{
+    list-style-position:inside ;
+}
+.notice a{
+    display: inline-block;
+    margin-top: 25px;
+    width: 250px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #7b6a58;
+    color: #fff;
+}
+.notice_text>a:nth-of-type(1){
+    margin-right: 12px;
+}
+.notice a:hover{
+    animation: jelly 0.5s;
+    background-color: #4e4337;
+}
+
+/* 푸터 */
+footer {
+    background-color: #F1EEE7;
+}
+
+/* 푸터 탑 */
+.footer_top {
+    width: 1320px;
+    margin: auto;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_top ul {
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+}
+
+.footer_top ul a {
+    display: block;
+    padding-left: 10px;
+}
+
+.footer_top ul li {
+    padding-left: 5px;
+}
+
+.footer_top ul a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer_btn {
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: unset;
+    border: none;
+    padding-right: 30px;
+}
+
+.footer_btn:hover {
+    font-weight: bold;
+    color: #26190F;
+    text-decoration: underline;
+}
+
+.footer_btn::after {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid #26190F;
+    border-bottom: 1px solid #26190F;
+    position: absolute;
+    top: 22%;
+    left: 150px;
+    animation: ani2 0.7s infinite alternate;
+}
+
+@keyframes ani2 {
+    0% {
+        transform: translateY(-5px) rotate(45deg);
+    }
+
+    100% {
+        transform: translateY(5px) rotate(45deg);
+    }
+}
+
+/* 푸터 바텀 */
+.footer_bottom_box {
+    display: none;
+}
+
+.footer_bottom {
+    border-top: 1px solid #999;
+    font-size: 16px;
+    width: 1320px;
+    margin: auto;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* 회사정보 */
+.info {
+    line-height: 1.8;
+}
+
+.info span:nth-child(1)::after {
+    content: '';
+    border-left: 1px solid #4e4337;
+    margin: 0 10px;
+}
+
+i {
+    font-size: 15px;
+    color: #797979;
+    display: block;
+    margin-top: 15px;
+}
+
+/* cs 정보 */
+.cs_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.cs_info p {
+    padding-left: 25px;
+}
