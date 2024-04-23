@@ -194,6 +194,8 @@ h4 {
     width: 1320px;
     margin: auto;
     position: relative;
+    padding-top: 150px;
+    margin-top: -150px;
 }
 
 .acat {
@@ -209,7 +211,7 @@ h4 {
     background: rgba(54, 38, 30, 0.5);
     /* background-color: #fff; */
     position: absolute;
-    top: 215px;
+    top: 236px;
     left: 659px;
     transform-origin: top;
     transform: scaleY(0);
