@@ -190,12 +190,9 @@ h4 {
 
 /* 1320px 박스 */
 .wrap {
-    overflow: hidden;
     width: 1320px;
     margin: auto;
     position: relative;
-    padding-top: 150px;
-    margin-top: -150px;
 }
 
 .acat {
@@ -211,7 +208,7 @@ h4 {
     background: rgba(54, 38, 30, 0.5);
     /* background-color: #fff; */
     position: absolute;
-    top: 236px;
+    top: 215px;
     left: 659px;
     transform-origin: top;
     transform: scaleY(0);
@@ -282,7 +279,7 @@ h3 {
 
 .t_box p {
     line-height: 2.3;
-    font-size: 17px;
+    font-size: 17x;
     font-weight: 400;
     padding-top: 40px;
 }
@@ -333,7 +330,6 @@ h3 {
 section{
     width: 1320px;
     margin: 0 auto 100px;
-    text-align: center;
 }
 section p{
     margin-bottom: 25px;
@@ -350,7 +346,7 @@ section span{
 }
 
 .color {
-    height: 50px;
+    height: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -moz-box;
@@ -359,30 +355,25 @@ section span{
 
 .color li {
     box-sizing: border-box;
-    padding-top: 13px;
+    padding: 10px 20px;
     height: 100%;
     flex: 1;
-    text-align: center;
+    line-height: 1.7;
 }
 
 .color li:nth-of-type(1) {
-    background-color: #E5E2D8;
-    color: #87736B;
+    background-color: #99867E;
+    color: #fff;
 }
 
 .color li:nth-of-type(2) {
-    background-color: #F1EEE7;
-    color: #87736B;
+    background-color: #FFF;
+    color: #505050;
+    border: 1px solid #cdcdcd;
 }
-
-.color li:nth-of-type(3) {
-    background-color: #87736B;
-    color: #fff;
-}
-
-.color li:nth-of-type(4) {
-    background-color: #56442E;
-    color: #fff;
+small{
+    font-size: 17px;
+    font-weight: 500;
 }
 
 h5 {
